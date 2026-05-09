@@ -29,11 +29,16 @@ function displayTasks(tasks) {
 
     for (let t of tasks) {
         const liElement = document.createElement("li");
-        // to achieve the same style as bootstrap list group item, we need to add the class "list-group-item" to liElement
-        // in the html <ul class="list-group">, the class "list-group" is for the ul element, 
+        // To achieve the same style as bootstrap list group item, 
+        // we need to add the class "list-group-item" to liElement.
+        // In the html <ul class="list-group">, the class "list-group" is for the ul element, 
         // and the class "list-group-item" is for each li element
-        // example: <li class="lisst-group-item d-flex justify-content-between">...</li> 
+        // example: <li class="list-group-item d-flex justify-content-between">...</li> 
         // either use .className or .classList.add to add class to an element
+        // ** Important note: the d-flex and justify-content-between has been removed in 
+        // this version, as it will cause the delete and update button to be on the same 
+        // line as the task name, date and urgency, which is not good for mobile view. 
+        // We will use row and col to make the layout better. **
         liElement.className = "list-group-item";
         // alternatively:
         // liElement.classList.add('list-group-item');
