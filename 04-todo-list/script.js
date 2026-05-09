@@ -29,6 +29,11 @@ function displayTasks(tasks) {
 
     for (let t of tasks) {
         const liElement = document.createElement("li");
+        // to achieve the same style as bootstrap list group item, we need to add the class "list-group-item" to liElement
+        // in the html <ul class="list-group">, the class "list-group" is for the ul element, 
+        // and the class "list-group-item" is for each li element
+        // example: <li class="lisst-group-item d-flex justify-content-between">...</li> 
+        // either use .className or .classList.add to add class to an element
         liElement.className = "list-group-item";
         // alternatively:
         // liElement.classList.add('list-group-item');
