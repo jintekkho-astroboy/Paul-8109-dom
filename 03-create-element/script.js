@@ -4,9 +4,15 @@ document.querySelector("#addBtn").addEventListener("click", function(){
     // document.createElement allows us to create a new DOM
     // element
     const newListItem = document.createElement("li");
-    newListItem.innerHTML = `${newNumber} <button>Say Hi</button>`
+    newListItem.innerHTML = `${newNumber} <button>Say Hi</button>`;
 
     // get the parent of the new list item
     const parent = document.querySelector("#numberList");
     parent.appendChild(newListItem);
+
+    // create element for ordered list
+    const newOlItem = document.createElement("ol");
+    newOlItem.innerText = newNumber;
+    const olParent = document.querySelector("#numberOl");
+    olParent.appendChild(newOlItem);
 })
