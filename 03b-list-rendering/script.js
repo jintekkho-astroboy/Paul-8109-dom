@@ -34,6 +34,7 @@ for (let s of shops) {
 
 const eventsEl = document.querySelector("#events");
 for (let e of events) {
+    // the card format was referring https://getbootstrap.com/docs/5.3/components/card/
     const divElement = document.createElement('div');
     divElement.className = "card m-1";
     divElement.style.width = "18rem";
